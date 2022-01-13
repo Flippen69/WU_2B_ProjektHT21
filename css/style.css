@@ -2,10 +2,14 @@
 	margin: 0;
 }
 
+::selection{
+	color: black;
+	background: black;
+}
+
 body{
-	font-family: 'Times New Roman', Times, serif;
 	color: white;
-	background: url(../img/frukost2.jpg)no-repeat;
+	background: url(../img/frukost1.jpg)no-repeat;
 	background-size: cover;
 }
 
@@ -13,7 +17,7 @@ body{
 .box_background{
 	position: absolute;
 	background-color: black;
-	width: 100vw;
+	width: 100%;
 	height: 100%;
 	opacity: 0.3;
 	z-index: 1;
@@ -21,7 +25,7 @@ body{
 }
 
 .navbar{
-	width: 100vw;
+	width: 100%;
 	float: right;
 	background: linear-gradient(180deg,black,transparent);
 	height: 150px;
@@ -37,7 +41,7 @@ body{
 
 .navbar ul li{
 	float: right;
-	margin: 30px 248px;
+	margin: 30px 150px;
 	/* margin-left: 100px; */
 	text-align: center;
 }
@@ -45,93 +49,73 @@ body{
 .navbar ul li a{
 	text-decoration: none;
 	color: white;
-	font-family: 'Merienda', cursive;
+	font-family: 'Work Sans', sans-serif;
 	font-size: 35px;
 }
 
-
-#info_content h1 {
-	position: relative;
-	font-size: 80px;
-	color: white;
-	z-index: 20;
-	top: 35vh;
-	text-align: center;
-	font-family: Lato;
-	/* text-decoration: underline #fff; */
+.navbar ul li a img{
+	width: 100px ;
 }
 
-#info_content .underline{
+
+.underline{
 	position: absolute;
 	background: white;
 	width: 10px;
-	height: 5px;
+	height: 4px;
 	z-index: 20;
-	top: 50vh;
-	width: 400px;
-	left: 34vw;
-	
+	top: 45vh;
+	width: 430px;
+	left: 33vw;
 }
 
-.test{
-	position: absolute;
-	z-index: 20;
-	top: 130px;
-	left: 50px;
-}
-
-#contact .container{
-	position: absolute;
-	max-width: 100%;
-	display: flex;
-	/* justify-content: center; */
-	align-items: center;
-	margin-top: 20px;
-	height: 50vh;
-	z-index: 10;
-  }
-  
-.container .contactInfo{
-	width: 600px;
-	display: flex;
-	flex-direction: column;
-  }
-  
-.container .contactInfo .box{
+.TextInfo{
 	position: relative;
-	padding: 20px 0;
-	display: flex;
-  }
-  
-.container .contactInfo .box .icon{	
-	min-width: 70px;
-	height: 70px;
-	background: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 50px;
-	font-size: 27px;
-  }
-  
-.container .contactInfo .box .text{
-	display: flex;
-	margin-left: 30px;
-	margin-top: -10px;
-	font-size: 16px;
-	color: #fff;
-	flex-direction: column;
-	font-weight: 300;
-  }
-  
-.container .contactInfo .box .text h3{
-	font-weight: 500;
-	color: #fff;
-  }
-  
-.clipboard_background{
-	background: rgb(2,0,36);
-	background: linear-gradient(4deg, #fc00ff 0%, #00dbde 100%);
+	z-index: 20;
+	top: 35vh;
+	text-align: center;
+}
+.TextInfo p{
+	font-size: 80px;
+	color: #FFFFFF;
+	text-align: center;
+	font-family: 'Work Sans', sans-serif;
+}
+
+.TextInfo span{
+	font-size: 30px;
+	color: #FFFFFF;
+	text-align: center;
+	font-family: 'Klee One', cursive;
+}
+
+a.button{
+	position: absolute;
+	font-size: 20px;
+	top: 82%;
+	left: 43%;
+	display:inline-block;
+	padding:12px 25px;
+	border-radius: 30px;
+	font-family: 'Work Sans', sans-serif;
+	background: #333;
+	z-index: 40;
+	border: 2px solid #333;
+	transition: border-color 0.5s;
+}
+
+a.button:hover{
+	text-decoration: none;
+	border-color: #FFFFFF;
+}
+
+a.button span{
+	font-size: 25px;
+	color: #FFFFFF;
+}
+
+/* .clipboard_background{
+	background: url(../img/frukost1.jpg);
 	height: 170vh;
 	z-index: 1;
 }  
@@ -140,28 +124,147 @@ body{
 	height: 1000px;
 	position: absolute;
 	left: 150px;
+	top: 200px;
 	z-index: 2;
+} */
+.meny{
+	background: url(../img/meny_bakgrund.jpg)no-repeat;
+	background-size: cover;
 }
-
-.menuInfo{
-	position: absolute;
-	left: 330px;
-	top: 150px;
-	background: black;
-	z-index: 3;
-	width: 639px;
-	height: 800px;
-}
-
-.menuInfo h1{
-	font-family: Lato;
-	color: #fff;
-	text-align: center;
-}
-
-.menu1{
+.menu_box{
 	position: relative;
-	width: 300px;
-	text-align: center;
+	background: white;
+	width: 65vw;
+	height: 60vh;
+	top: 200px;
+	margin: auto;
+	z-index: 100;
 	border-radius: 20px;
+}
+
+.menu_box .menu_wrapper{
+	display: grid;
+	width: 100%;
+	height: 100%;
+	grid-gap: 10px;
+	grid-template-columns: 10px 1fr 1fr 1fr 10px;
+	grid-template-rows: 50px 1fr 10px;
+	grid-template-areas:
+	"ar ar ar ar ar"
+	".. b1 b2 b3 .."
+	".. .. .. .. ..";
+}
+
+article{
+	grid-area: ar;
+}
+
+article p{
+	font-size: 50px;
+	font-family: 'Work Sans', sans-serif;
+	margin-left: 70px;
+	margin-top: 17px;
+	margin-left: 240px;
+}
+.box1{
+	grid-area: b1;
+	background: url(../img/menu1.1.jpg)no-repeat;
+	background-size: cover;
+	border-radius: 10px;
+}
+
+.box2{
+	grid-area: b2;
+	background: url(../img/menu2.2.jpg)no-repeat;
+	background-size: cover;
+	border-radius: 10px;
+}
+
+.box3{
+	grid-area: b3;
+	background: url(../img/menu3.1.jpg)no-repeat;
+	background-size: cover;
+	border-radius: 10px;
+}
+
+.menu1_background{
+	position: absolute;
+	border-radius: 10px;
+	width: 257.5px;
+	height: 266.5px;
+	background-color: gray;
+	opacity: 0.0000001;
+	top: 60px;
+	left: 19.5px;
+	transition: background-color 0.5s;
+	z-index: 1;
+}
+ 
+.menu2_background{
+	position: absolute;
+	border-radius: 10px;
+	width: 257.5px;
+	height: 266.5px;
+	background-color: grey;
+	top: 60px;
+	left: 287px;
+	transition: background-color 0.5s;
+	z-index: 1;
+	opacity: 0.0000001;
+}
+
+.menu3_background{
+	position: absolute;
+	border-radius: 10px;
+	width: 257.5px;
+	height: 266.5px;
+	background-color: gray;
+	opacity: 0.0000001;
+	top: 60px;
+	right: 19.5px;
+	transition: background-color 0.5s;
+	z-index: 1;
+}
+
+.menu1_background:hover,
+.menu2_background:hover,
+.menu3_background:hover{
+	opacity: 0.75;
+	background-color: black;
+}
+
+.menu1_background .menu1_info,
+.menu2_background .menu2_info,
+.menu3_background .menu3_info{
+	margin-left: 15px;
+	margin-top: 15px;
+	width: 230px;
+	height: 230px;
+}
+
+.menu1_background .menu1_info p,
+.menu2_background .menu2_info p,
+.menu3_background .menu3_info p{
+	text-align: center;
+	color: transparent;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 36px;
+}
+.menu1_background .menu1_info span,
+.menu2_background .menu2_info span,
+.menu3_background .menu3_info span{
+	color: transparent;
+	text-align: center;
+	font-family: 'Luxurious Roman', cursive;
+	font-size: 20px;
+}
+
+.menu1_background:hover .menu1_info p,
+.menu1_background:hover .menu1_info span,
+.menu2_background:hover .menu2_info p,
+.menu2_background:hover .menu2_info span,
+.menu3_background:hover .menu3_info p,
+.menu3_background:hover .menu3_info span{
+	color: white;
+	z-index: 2;
 }
