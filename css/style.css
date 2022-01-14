@@ -39,6 +39,11 @@ body{
 	margin-top: 10px;
 }
 
+.navbar ul .logga{
+	/* margin: 20px; */
+	margin-top: 5px;
+}
+
 .navbar ul li{
 	float: right;
 	margin: 30px 150px;
@@ -89,44 +94,6 @@ body{
 	font-family: 'Klee One', cursive;
 }
 
-a.button{
-	position: absolute;
-	font-size: 20px;
-	top: 82%;
-	left: 43%;
-	display:inline-block;
-	padding:12px 25px;
-	border-radius: 30px;
-	font-family: 'Work Sans', sans-serif;
-	background: #333;
-	z-index: 40;
-	border: 2px solid #333;
-	transition: border-color 0.5s;
-}
-
-a.button:hover{
-	text-decoration: none;
-	border-color: #FFFFFF;
-}
-
-a.button span{
-	font-size: 25px;
-	color: #FFFFFF;
-}
-
-/* .clipboard_background{
-	background: url(../img/frukost1.jpg);
-	height: 170vh;
-	z-index: 1;
-}  
-.clipboard {
-	width: 1000px;
-	height: 1000px;
-	position: absolute;
-	left: 150px;
-	top: 200px;
-	z-index: 2;
-} */
 .meny{
 	background: url(../img/meny_bakgrund.jpg)no-repeat;
 	background-size: cover;
@@ -136,7 +103,7 @@ a.button span{
 	background: white;
 	width: 65vw;
 	height: 60vh;
-	top: 200px;
+	top: 180px;
 	margin: auto;
 	z-index: 100;
 	border-radius: 20px;
@@ -267,4 +234,163 @@ article p{
 .menu3_background:hover .menu3_info span{
 	color: white;
 	z-index: 2;
+}
+
+.kontakt *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Work Sans', sans-serif;;
+}
+
+.kontakt{
+	min-height: 120vh;
+	width: 100%;
+	background: rgb(82, 98, 111);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container{
+	width: 20%;
+	background: #FFFFFF;
+	border-radius: 6px;
+	padding: 20px 60px 40px 40px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .content{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.container .content .contact_info{
+	width: 25%;
+	height: 100%;
+	position: relative;
+}
+
+.content .contact_info::before{
+	content: '';
+	position: absolute;
+	height: 70%;
+	width: 2px;
+	right: -15px;
+	top: 50%;
+	transform: translateY(-50%);	
+	background: #afafb6;
+}
+
+.content .contact_info .details{
+	margin: 14px;
+	text-align: center;
+}
+
+.content .contact_info .details i{
+	font-size: 30px;
+	color: #3e2093;
+	margin-bottom: 10px;
+}
+
+.content .contact_info .details .topic{
+	font-size: 22px;
+	font-weight: 900;
+}
+
+.content .contact_info .details .text1,
+.content .contact_info .details .text2{
+	font-size: 18px;
+	color: #afafb6;
+}
+
+.container .content .message_info{
+	width: 75%;
+	margin-left: 75px;
+}
+
+.content .message_info .topic-text{
+	font-size: 23px;
+	font-weight: 600;
+	color: #3e2093;
+}
+
+.message_info .input-box{
+	height: 50px;
+	width: 100%;
+	margin: 12px 0;
+}
+
+.message_info .input-box input,
+.message_info .input-box textarea,
+.message_info .input-box .message-box{
+	height: 100%;
+	width: 100%;
+	border: none;
+	font-size: 20px;
+	background: #F0F1F8;
+	border-radius: 6px;
+	padding: 0 15px;
+	resize: none;
+}
+
+.message_info .message-box{
+	min-height: 110px;
+	margin-top: 6px;
+}
+
+.message_info .button input[type="button"]{
+	color: #FFFFFF;
+	font-size: 22px;
+	outline: none;
+	border: none;
+	padding: 12px 26px;
+	border-radius: 6px;
+	background: #3e2093;
+	cursor: pointer;
+	transition: all 0.3 ease;
+}
+
+.button input[type="button"]:hover{
+	background: #5029bc;
+}
+
+.navbar_contact{
+	position: absolute;
+	top: -30px;
+	width: 100%;
+	float: right;
+	/* background: linear-gradient(180deg,black,transparent); */
+	height: 150px;
+	z-index: 15;
+	position: absolute;
+	/* overflow: hidden; */
+}
+
+.navbar_contact ul{
+	margin: 20px;
+	margin-top: 40px;
+}
+
+.navbar_contact ul .logga{
+	/* margin: 20px; */
+	margin-top: -1px;
+}
+.navbar_contact ul li{
+	float: right;
+	margin: 30px 150px;
+	/* margin-left: 100px; */
+	text-align: center;
+}
+
+.navbar_contact ul li a{
+	text-decoration: none;
+	color: white;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 35px;
+}
+
+.navbar_contact ul li a img{
+	width: 100px ;
 }
